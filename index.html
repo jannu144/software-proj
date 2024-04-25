@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visit Athens</title>
+    <link rel="stylesheet" href="style.css">
+</head> 
+<body>
+    <header>
+        <h1>Visit Athens</h1>
+    </header>
+    <main>
+        <section class="posts">
+            <h2>Latest Posts</h2>
+            <article v-for="post in blogPosts" :key="post.id">
+                <h3><a :href=" '/post/' + post.id">{{post.title}}</a></h3>
+                <p>{{post.desciption}}</p>
+                <div class="post-meta">
+                    <span>By: {{post.author}}</span>
+                    <span> - {{post.date}}</span>
+                </div>
+            </article>
+        </section>
+    </main>
+    <script src=""></script> <!-- i think you have to add the vue.js url here -->
+    <script src="app.js"></script>
+</body>  
+</html>
